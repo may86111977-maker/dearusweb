@@ -93,17 +93,71 @@
   .process-steps a { color:#bfa68a; text-decoration:underline; }
   .process-steps a:hover { color:#d7c6b6; }
 
+  /* ===== 燈箱樣式 ===== */
+  #music-modal {
+    position: fixed; top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    display:flex; justify-content:center; align-items:center;
+    z-index:9999;
+    opacity:1; visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  #music-modal.hidden { opacity:0; visibility:hidden; }
+  #music-modal .modal-content {
+    background:#fff; padding:40px 30px; border-radius:20px;
+    text-align:center; max-width:400px; width:90%;
+    box-shadow:0 12px 36px rgba(0,0,0,0.2);
+    animation: modal-fade 0.5s ease;
+  }
+  @keyframes modal-fade { 0% { transform: translateY(-30px); opacity:0; } 100% { transform: translateY(0); opacity:1; } }
+  #music-modal h2 { font-family:'Playfair Display', serif; font-size:28px; margin-bottom:16px; color:#5a4a3c; }
+  #music-modal p { font-size:18px; color:#7a6b5c; margin-bottom:24px; }
+  #music-modal .modal-buttons button {
+    padding:12px 28px; margin:0 12px; font-size:16px;
+    border:none; border-radius:50px; font-weight:600; cursor:pointer;
+    transition: all 0.3s;
+  }
+  #music-modal .modal-buttons #music-yes {
+    background: linear-gradient(135deg,#d7c6b6,#bfa68a); color:#fff;
+  }
+  #music-modal .modal-buttons #music-yes:hover {
+    background: linear-gradient(135deg,#bfa68a,#d7c6b6);
+  }
+  #music-modal .modal-buttons #music-no {
+    background:#f0f0f0; color:#5a4a3c;
+  }
+  #music-modal .modal-buttons #music-no:hover {
+    background:#e0e0e0;
+  }
+
 </style>
 </head>
 <body>
 
-<!-- 封面 -->
+<!-- ===== 背景音樂燈箱 ===== -->
+<div id="music-modal">
+  <div class="modal-content">
+    <h2>開啟背景音樂嗎？</h2>
+    <p>我們準備了一段溫暖的婚禮背景音樂，讓瀏覽更有氛圍。</p>
+    <div class="modal-buttons">
+      <button id="music-yes">開啟音樂</button>
+      <button id="music-no">暫不播放</button>
+    </div>
+  </div>
+</div>
+<audio id="bg-music" loop>
+  <source src="music/wedding-bg.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ===== 封面 ===== -->
 <section id="hero">
   <div class="hero-overlay">
     <h1>Dearus</h1>
     <p>一份不急著說完的邀請，讓照片與文字，慢慢把「我們」說清楚。本商店專賣網站式電子喜帖及婚禮影片，歡迎參考選購❤</p>
   </div>
 </section>
+
 </section><!-- 網站式電子喜帖 -->
 <section id="section1">
   <div class="cards-container">
@@ -241,13 +295,13 @@
   </div>
 </section>
 
-<!-- 下單按鈕 -->
+<!-- ===== 下單按鈕 ===== -->
 <div class="order-btn">
   <a href="https://docs.google.com/forms/d/1ORQJnRp7BlY29c-JV1RVuPl5Mo7OmTnNv29RxwV5q8I/preview" target="_blank">前往 Dearus 婚禮電子喜帖下單表單</a>
 </div>
 
 <script>
-  // 淡入效果
+  // ===== 淡入效果 =====
   const sections = document.querySelectorAll('section');
   const orderBtn = document.querySelector('.order-btn');
 
@@ -270,6 +324,22 @@
   }, { threshold: 0.2 });
 
   orderObserver.observe(orderBtn);
+
+  // ===== 音樂燈箱 =====
+  const musicModal = document.getElementById('music-modal');
+  const musicYes = document.getElementById('music-yes');
+  const musicNo = document.getElementById('music-no');
+  const bgMusic = document.getElementById('bg-music');
+
+  musicYes.addEventListener('click', () => {
+    bgMusic.volume = 0.5;
+    bgMusic.play();
+    musicModal.classList.add('hidden');
+  });
+
+  musicNo.addEventListener('click', () => {
+    musicModal.classList.add('hidden');
+  });
 </script>
 
 </body>
