@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dearus｜婚禮電子喜帖</title>
+<!-- Google 字型 -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@500;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Montserrat', sans-serif; color:#333; scroll-behavior: smooth; background:#fdfcf9; }
+
+  a { color:inherit; text-decoration:none; }
+  section { width:100%; min-height:100vh; display:flex; justify-content:center; align-items:center; flex-direction:column; padding:40px 20px; opacity:0; transform: translateY(30px); transition: all 1s ease; }
+  section.visible { opacity:1; transform: translateY(0); }
+
+  /* 封面 */
+  #hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  #hero::before {
+    content:"";
+    position:absolute; top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.25);
+  }
+  #hero .hero-overlay {
+    position: relative;
+    color:#fff;
+    max-width:800px;
+    padding:20px;
+    z-index:1;
+  }
+  #hero h1 {
+    font-family:'Dancing Script', cursive;
+    font-size:72px;
+    margin-bottom:24px;
+    letter-spacing:2px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  #hero p {
+    font-family:'Montserrat', sans-serif;
+    font-size:22px;
+    line-height:1.6;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  }
+
+  /* 商品區標題 */
+  .cards-container { max-width:1100px; width:100%; display:flex; flex-direction:column; align-items:center; }
+  h2 { font-family:'Playfair Display', serif; font-size:36px; color:#5a4a3c; text-align:center; margin-bottom:40px; }
+
+  /* 商品卡片 */
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:32px; width:100%; }
+  .card {
+    background:#fff; border-radius:20px; overflow:hidden;
+    box-shadow:0 12px 24px rgba(0,0,0,0.08);
+    text-align:center; transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover { transform: translateY(-6px); box-shadow:0 20px 36px rgba(0,0,0,0.15); }
+  .card img { width:100%; height:350px; object-fit:contain; background:#fdfcf9; }
+  .card h3 { margin:16px 0 8px; font-family:'Playfair Display', serif; font-size:22px; color:#5a4a3c; }
+  .card p { margin-bottom:16px; color:#7a6b5c; font-weight:600; font-size:18px; }
+
+  /* 下單按鈕 */
+  .order-btn { width:100%; text-align:center; margin:80px 0; opacity:0; transform: translateY(30px); transition: all 1s ease; }
+  .order-btn.visible { opacity:1; transform: translateY(0); }
+  .order-btn a {
+    display:inline-block; padding:18px 48px;
+    background: linear-gradient(135deg,#d7c6b6,#bfa68a);
+    color:#fff; font-weight:700; font-size:20px; text-decoration:none; border-radius:50px;
+    transition:0.3s;
+  }
+  .order-btn a:hover { background: linear-gradient(135deg,#bfa68a,#d7c6b6); }
+
+  /* 區塊內文字居中 */
+  section p { max-width:600px; text-align:center; line-height:1.8; }
+
+  /* 聯絡我們 */
+  #contact .contact-links { margin-top:24px; display:flex; justify-content:center; gap:16px; font-size:18px; font-weight:600; color:#5a4a3c; }
+  #contact .contact-links a:hover { color:#bfa68a; text-decoration:underline; }
+
+  /* 製作流程 */
+  .process-steps { margin-top:24px; max-width:700px; text-align:left; line-height:1.8; color:#7a6b5c; font-size:18px; padding-left:20px; }
+  .process-steps li { margin-bottom:16px; }
+  .process-steps a { color:#bfa68a; text-decoration:underline; }
+  .process-steps a:hover { color:#d7c6b6; }
+
+</style>
+</head>
+<body>
+
+<!-- 封面 -->
+<section id="hero">
+  <div class="hero-overlay">
+    <h1>Dearus</h1>
+    <p>一份不急著說完的邀請，讓照片與文字，慢慢把「我們」說清楚。本商店專賣網站式電子喜帖及婚禮影片，歡迎參考選購❤</p>
+  </div>
+</section>
+</section><!-- 網站式電子喜帖 -->
+<section id="section1">
+  <div class="cards-container">
+    <h2>網站式電子喜帖</h2>
+    <div class="cards">
+
+      <a href="https://shopee.tw/%E3%80%90%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96%E3%80%91%E7%B6%B2%E7%AB%99%E5%BC%8F%E5%A9%9A%E7%A6%AE%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%9648%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%80%92%E6%95%B8-%E9%80%A3%E7%B5%90%E5%B0%8E%E8%88%AA%E5%8F%8A%E5%87%BA%E5%B8%AD%E8%A1%A8%E5%96%AE-%E5%B0%88%E5%B1%AC%E9%9F%B3%E6%A8%82%EF%BD%9C%E7%B6%93%E5%85%B8%E8%BF%8E%E5%BA%8F%C2%B7%E6%B3%95%E5%BC%8F%E6%B5%AA%E6%BC%AB%EF%BD%9CDearus-i.24341934.40977311877?extraParams=%7B%22display_model_id%22%3A320311437735%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/經典迎序·法式浪漫.jpg" alt="">
+          <h3>經典迎序·法式浪漫</h3>
+          <p>NT$750-900</p>
+        </div>
+      </a>
+
+      <a href="https://shopee.tw/%E3%80%90%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96%E3%80%91%E7%B6%B2%E7%AB%99%E5%BC%8F%E5%A9%9A%E7%A6%AE%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96-48%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%80%92%E6%95%B8-%E9%80%A3%E7%B5%90%E5%B0%8E%E8%88%AA%E5%8F%8A%E5%87%BA%E5%B8%AD%E8%A1%A8%E5%96%AE-%E5%B0%88%E5%B1%AC%E9%9F%B3%E6%A8%82%EF%BD%9C%E9%9B%8B%E6%B0%B8%E7%99%BD%E6%97%AD%C2%B7%E9%9F%93%E7%B3%BB%E7%B0%A1%E7%B4%84%EF%BD%9CDearus-i.24341934.48453248650?extraParams=%7B%22display_model_id%22%3A415311356604%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/雋永白旭·韓系簡約.jpg" alt="">
+          <h3>雋永白旭·韓系簡約</h3>
+          <p>NT$750-900</p>
+        </div>
+      </a>
+
+      <a href="https://shopee.tw/%E3%80%90%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96%E3%80%91%E7%B6%B2%E7%AB%99%E5%BC%8F%E5%A9%9A%E7%A6%AE%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96-48%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%80%92%E6%95%B8-%E9%80%A3%E7%B5%90%E5%B0%8E%E8%88%AA%E5%8F%8A%E5%87%BA%E5%B8%AD%E8%A1%A8%E5%96%AE-%E5%B0%88%E5%B1%AC%E9%9F%B3%E6%A8%82%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%96%9C%E5%B8%96%E6%A8%A1%E6%9D%BF%EF%BD%9C%E5%B9%B8%E7%A6%8F%E6%97%A5%E5%88%8A%C2%B7%E5%85%B8%E9%9B%85%E6%B0%B8%E6%81%86%EF%BD%9C-i.24341934.25447892100?extraParams=%7B%22display_model_id%22%3A355418503801%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/幸福日刊·典雅永恆.jpg" alt="">
+          <h3>幸福日刊·典雅永恆</h3>
+          <p>NT$750-900</p>
+        </div>
+      </a>
+
+      <a href="https://shopee.tw/%E3%80%90%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96%E3%80%91%E4%B8%80%E9%A0%81%E5%BC%8F%E7%B6%B2%E7%AB%99%E5%A9%9A%E7%A6%AE%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%9648%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%80%92%E6%95%B8-%E9%80%A3%E7%B5%90%E5%B0%8E%E8%88%AA%E5%8F%8A%E5%87%BA%E5%B8%AD%E8%A1%A8%E5%96%AE-%E5%B0%88%E5%B1%AC%E9%9F%B3%E6%A8%82%EF%BD%9C%E5%85%89%E5%BD%B1%E9%96%8B%E5%A0%B4%C2%B7%E6%B0%B8%E6%81%86%E6%AD%A4%E5%88%BB%EF%BD%9CDearus-i.24341934.54005232533?extraParams=%7B%22display_model_id%22%3A390478539578%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/光影開場·永恆此刻.jpg" alt="">
+          <h3>光影開場·永恆此刻</h3>
+          <p>NT$750-900</p>
+        </div>
+      </a>
+
+      <a href="https://shopee.tw/%E3%80%90%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96%E3%80%91%E7%B6%B2%E7%AB%99%E5%BC%8F%E5%A9%9A%E7%A6%AE%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96-48%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%80%92%E6%95%B8-%E9%80%A3%E7%B5%90%E5%B0%8E%E8%88%AA%E5%8F%8A%E5%87%BA%E5%B8%AD%E8%A1%A8%E5%96%AE-%E5%B0%88%E5%B1%AC%E9%9F%B3%E6%A8%82%EF%BD%9C%E5%96%9C%E6%97%A5%E6%9A%96%E6%9A%96%C2%B7%E4%B8%AD%E5%BC%8F%E6%BA%AB%E9%A6%A8%EF%BD%9CDearus-i.24341934.55053163826?extraParams=%7B%22display_model_id%22%3A390311330282%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/喜日暖暖·中式溫馨.jpg" alt="">
+          <h3>喜日暖暖·中式溫馨</h3>
+          <p>NT$750-900</p>
+        </div>
+      </a>
+
+      <a href="https://shopee.tw/%E3%80%90%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96%E3%80%91%E7%B6%B2%E7%AB%99%E5%BC%8F%E5%A9%9A%E7%A6%AE%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96-48%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%80%92%E6%95%B8-%E9%80%A3%E7%B5%90%E5%B0%8E%E8%88%AA%E5%8F%8A%E5%87%BA%E5%B8%AD%E8%A1%A8%E5%96%AE-%E5%B0%88%E5%B1%AC%E9%9F%B3%E6%A8%82%EF%BD%9C%E6%9F%94%E5%85%89%E6%95%98%E4%BA%8B%C2%B7%E9%9B%BB%E5%BD%B1%E6%9B%B8%E5%AF%AB%EF%BD%9CDearus-i.24341934.57453228721?extraParams=%7B%22display_model_id%22%3A267263424965%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/柔光敘事·電影書寫.jpg" alt="">
+          <h3>柔光敘事·電影書寫</h3>
+          <p>NT$750-900</p>
+        </div>
+      </a>
+
+      <a href="https://shopee.tw/%E3%80%90%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96%E3%80%91%E4%B8%80%E9%A0%81%E5%BC%8F%E7%B6%B2%E7%AB%99%E5%A9%9A%E7%A6%AE%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%9648%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%80%92%E6%95%B8-%E9%80%A3%E7%B5%90%E5%B0%8E%E8%88%AA%E5%8F%8A%E5%87%BA%E5%B8%AD%E8%A1%A8%E5%96%AE-%E5%B0%88%E5%B1%AC%E9%9F%B3%E6%A8%82%EF%BD%9C%E5%85%89%E8%90%BD%E7%B4%94%E7%99%BD%C2%B7%E6%BD%94%E7%99%BD%E4%B9%8B%E7%B4%84%EF%BD%9CDearus-i.24341934.42978498969?extraParams=%7B%22display_model_id%22%3A315512327148%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/光落純白·潔白之約.jpg" alt="">
+          <h3>光落純白·潔白之約</h3>
+          <p>NT$750-900</p>
+        </div>
+      </a>
+
+      <a href="https://shopee.tw/%E3%80%90%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96%E3%80%91%E7%B6%B2%E7%AB%99%E5%BC%8F%E5%A9%9A%E7%A6%AE%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96-48%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%80%92%E6%95%B8-%E9%80%A3%E7%B5%90%E5%B0%8E%E8%88%AA%E5%8F%8A%E5%87%BA%E5%B8%AD%E8%A1%A8%E5%96%AE-%E5%B0%88%E5%B1%AC%E9%9F%B3%E6%A8%82%EF%BD%9C%E8%AA%93%E7%B4%84%E5%85%B8%E8%97%8F%C2%B7%E7%8F%BE%E4%BB%A3%E5%85%B8%E9%9B%85%EF%BD%9CDearus-i.24341934.28143835018?extraParams=%7B%22display_model_id%22%3A400311345881%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/誓約典藏·現代典雅.jpg" alt="">
+          <h3>誓約典藏·現代典雅</h3>
+          <p>NT$750-900</p>
+        </div>
+      </a>
+
+      <a href="https://shopee.tw/%E3%80%90%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96%E3%80%91%E7%B6%B2%E7%AB%99%E5%BC%8F%E5%A9%9A%E7%A6%AE%E9%9B%BB%E5%AD%90%E5%96%9C%E5%B8%96-48%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%80%92%E6%95%B8-%E9%80%A3%E7%B5%90%E5%B0%8E%E8%88%AA%E5%8F%8A%E5%87%BA%E5%B8%AD%E8%A1%A8%E5%96%AE-%E5%B0%88%E5%B1%AC%E9%9F%B3%E6%A8%82%EF%BD%9C%E7%B2%89%E5%AD%97%E8%90%BD%E6%AC%BE%C2%B7%E6%B8%A9%E6%9F%94%E6%97%A5%E5%B8%B8%EF%BD%9CDearus-i.24341934.48955685695?extraParams=%7B%22display_model_id%22%3A420512004792%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/粉字落款·溫柔日常.jpg" alt="">
+          <h3>粉字落款·溫柔日常</h3>
+          <p>NT$850</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- 婚禮影片 -->
+<section id="section2">
+  <div class="cards-container">
+    <h2>婚禮影片</h2>
+    <div class="cards">
+
+      <a href="https://shopee.tw/%E9%9F%93%E7%B3%BB%E8%B3%AA%E6%84%9F-%E5%A9%9A%E7%A6%AE%E9%96%8B%E5%A0%B4%E5%BD%B1%E7%89%87-48%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8-%E5%A9%9A%E7%A6%AE%E5%BD%B1%E7%89%87-%E9%96%8B%E5%A0%B4%E5%BD%B1%E7%89%87%EF%BD%9CDearus-i.24341934.40477620178?extraParams=%7B%22display_model_id%22%3A355365295689%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/韓系質感.jpg" alt="">
+          <h3>韓系質感</h3>
+          <p>NT$850</p>
+        </div>
+      </a>
+
+      <a href="https://shopee.tw/%E5%BE%A9%E5%8F%A4%E9%9B%BB%E5%BD%B1%EF%BD%9C%E5%A9%9A%E7%A6%AE%E5%BD%B1%E7%89%87-48%E5%B0%8F%E6%99%82%E5%87%BA%E8%B2%A8-%E9%96%8B%E5%A0%B4%E5%BD%B1%E7%89%87%EF%BD%9CDearus-i.24341934.49754477330?extraParams=%7B%22display_model_id%22%3A395417105041%2C%22model_selection_logic%22%3A3%7D" target="_blank">
+        <div class="card">
+          <img src="images/復古電影.jpg" alt="">
+          <h3>復古電影</h3>
+          <p>NT$850</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+<!-- 聯絡我們 -->
+<section id="contact">
+  <div class="cards-container">
+    <h2>聯絡我們</h2>
+    <p>有任何疑問或想了解更多作品，歡迎透過以下方式聯繫我們：</p>
+    <div class="contact-links">
+      <a href="https://shopee.tw/may3062525" target="_blank">蝦皮商城</a>
+      <span>|</span>
+      <a href="https://www.instagram.com/dearus_2025/reels/" target="_blank">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- 製作及付款流程 -->
+<section id="process">
+  <div class="cards-container">
+    <h2>製作與付款流程</h2>
+    <ol class="process-steps">
+      <li><strong> 填寫訂單表單：</strong>新人前往 <a href="https://docs.google.com/forms/d/1ORQJnRp7BlY29c-JV1RVuPl5Mo7OmTnNv29RxwV5q8I/preview" target="_blank">Dearus 婚禮電子喜帖下單表單</a> 填寫。 </li>
+      <li><strong> 完成初版：</strong>Dearus 於「收到完整資料後 2 個工作天內」完成電子喜帖/影片初版，並提供預覽網址供您校稿。</li>
+      <li><strong> 校稿修改：</strong>校稿修改共 2 次（限文字內容及照片順序調整，字型／照片大小／文字及照片排版／文字顏色恕不接受調整）。</li>
+      <li><strong> 提供匯款帳號：</strong>完稿確認無誤後，Dearus 會提供匯款帳號。</li>
+      <li><strong> 交付最終版本：</strong>完成匯款後，交付最終「無廣告版本」電子喜帖/影片。</li>
+    </ol>
+  </div>
+</section>
+
+<!-- 下單按鈕 -->
+<div class="order-btn">
+  <a href="https://docs.google.com/forms/d/1ORQJnRp7BlY29c-JV1RVuPl5Mo7OmTnNv29RxwV5q8I/preview" target="_blank">前往 Dearus 婚禮電子喜帖下單表單</a>
+</div>
+
+<script>
+  // 淡入效果
+  const sections = document.querySelectorAll('section');
+  const orderBtn = document.querySelector('.order-btn');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
+
+  const orderObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        orderBtn.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  orderObserver.observe(orderBtn);
+</script>
+
+</body>
+</html>
